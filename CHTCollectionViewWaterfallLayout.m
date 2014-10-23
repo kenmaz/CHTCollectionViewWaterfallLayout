@@ -266,7 +266,7 @@ const NSInteger unionSize = 20;
     top += headerInset.top;
 
     if (headerHeight > 0) {
-      attributes = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:CHTCollectionElementKindSectionHeader withIndexPath:[NSIndexPath indexPathForItem:0 inSection:section]];
+      attributes = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader withIndexPath:[NSIndexPath indexPathForItem:0 inSection:section]];
       attributes.frame = CGRectMake(headerInset.left,
                                     top,
                                     self.collectionView.frame.size.width - (headerInset.left + headerInset.right),
@@ -333,7 +333,7 @@ const NSInteger unionSize = 20;
     top += footerInset.top;
 
     if (footerHeight > 0) {
-      attributes = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:CHTCollectionElementKindSectionFooter withIndexPath:[NSIndexPath indexPathForItem:0 inSection:section]];
+      attributes = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionFooter withIndexPath:[NSIndexPath indexPathForItem:0 inSection:section]];
       attributes.frame = CGRectMake(footerInset.left,
                                     top,
                                     self.collectionView.frame.size.width - (footerInset.left + footerInset.right),
