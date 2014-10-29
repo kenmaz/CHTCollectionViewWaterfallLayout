@@ -42,10 +42,10 @@
     [_collectionView registerClass:[CHTCollectionViewWaterfallCell class]
         forCellWithReuseIdentifier:CELL_IDENTIFIER];
     [_collectionView registerClass:[CHTCollectionViewWaterfallHeader class]
-        forSupplementaryViewOfKind:CHTCollectionElementKindSectionHeader
+        forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                withReuseIdentifier:HEADER_IDENTIFIER];
     [_collectionView registerClass:[CHTCollectionViewWaterfallFooter class]
-        forSupplementaryViewOfKind:CHTCollectionElementKindSectionFooter
+        forSupplementaryViewOfKind:UICollectionElementKindSectionFooter
                withReuseIdentifier:FOOTER_IDENTIFIER];
   }
   return _collectionView;
@@ -111,11 +111,11 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
   UICollectionReusableView *reusableView = nil;
 
-  if ([kind isEqualToString:CHTCollectionElementKindSectionHeader]) {
+  if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
     reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                       withReuseIdentifier:HEADER_IDENTIFIER
                                                              forIndexPath:indexPath];
-  } else if ([kind isEqualToString:CHTCollectionElementKindSectionFooter]) {
+  } else if ([kind isEqualToString:UICollectionElementKindSectionFooter]) {
     reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                       withReuseIdentifier:FOOTER_IDENTIFIER
                                                              forIndexPath:indexPath];

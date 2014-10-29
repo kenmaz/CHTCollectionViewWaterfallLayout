@@ -7,9 +7,6 @@
 
 #import "CHTCollectionViewWaterfallLayout.h"
 
-NSString *const CHTCollectionElementKindSectionHeader = @"CHTCollectionElementKindSectionHeader";
-NSString *const CHTCollectionElementKindSectionFooter = @"CHTCollectionElementKindSectionFooter";
-
 @interface CHTCollectionViewWaterfallLayout ()
 /// The delegate will point to collection view's delegate automatically.
 @property (nonatomic, weak) id <CHTCollectionViewDelegateWaterfallLayout> delegate;
@@ -386,9 +383,9 @@ const NSInteger unionSize = 20;
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForSupplementaryViewOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
   UICollectionViewLayoutAttributes *attribute = nil;
-  if ([kind isEqualToString:CHTCollectionElementKindSectionHeader]) {
+  if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
     attribute = self.headersAttribute[@(indexPath.section)];
-  } else if ([kind isEqualToString:CHTCollectionElementKindSectionFooter]) {
+  } else if ([kind isEqualToString:UICollectionElementKindSectionFooter]) {
     attribute = self.footersAttribute[@(indexPath.section)];
   }
   return attribute;
